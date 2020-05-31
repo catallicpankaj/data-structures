@@ -1,0 +1,61 @@
+int top1 = -1;
+int top2 = 100;
+int size = 100;
+int arr[];
+push1 (int x){
+if(top1 < top2 -1){
+    top1++
+    arr[top1] = x;
+}
+
+else {
+    //overflow exception
+}
+}
+
+
+
+push2(int x)
+{
+    if(top1 < top2 -1){
+    top2--
+    arr[top2] = x;
+}
+else{
+    // overflow exception
+}
+}
+
+
+
+int pop1(){
+
+if(top1==-1){
+    // underflow condition
+}else{
+      int x = arr[top1];
+            top1 --;
+            return x; 
+}
+
+}
+
+
+
+int pop2(){
+
+if(top2==size){
+    // underflow condition
+}else{
+      int x = arr[top2];
+            top2 ++;
+            return x; 
+}
+
+}
+
+
+
+isEmpty(){
+    return top1 < top2 -1;
+}

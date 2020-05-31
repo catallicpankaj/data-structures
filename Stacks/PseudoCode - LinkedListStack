@@ -1,0 +1,52 @@
+/**
+* Implement a stack using LinkedList.
+*
+**/
+
+StackAsLinkedlist(){
+    StackNode root;
+
+    StackNode (){
+        int data;
+        StackNode *next;
+        StackNode(int data){
+                this.data = data;
+            }
+    }
+
+fuction isEmpty(){
+    if(root == null){
+        return true;
+    }
+    return false;
+}
+    
+function push(int data){
+    StackNode newNode = new StackNode(data);
+    if(root==null){
+        root = newNode;
+    } else{
+        StackNode temp = root;
+        root = newNode;
+        newNode.next = temp;
+    }
+}
+
+peek(){
+    if(isEmpty()){
+        //Nothing to return stack is empty
+    }
+    return root.data;
+}
+
+pop(){
+    if (root == null){
+        //underflow
+    }
+    int poppedData  = root.data;
+    root = root.next;
+    return poppedData;
+}
+
+
+}

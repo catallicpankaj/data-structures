@@ -1,0 +1,35 @@
+/**
+ * This section defines the pseduo code to define the stack and its functions.
+ */
+
+int a[10]; 
+top = -1;
+
+push(x){
+    if(top == 9){
+        //overflow exception
+    }
+    top = top+1;
+    a[top]=x;
+}
+
+
+pop(){
+    if(isEmpty()){
+        //underflow exception;
+    }
+    top = top -1;
+}
+
+
+peek_top(){
+ return a[top];
+}
+
+
+isEmpty(){
+    if(top == -1){
+        return true;
+    }
+    return false;
+}
